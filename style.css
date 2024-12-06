@@ -1,0 +1,711 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.overall {
+    width: 100%;
+    min-height: 100vh;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    
+}
+/*-------------------------------------------------- navbar--------------------------------------- */
+nav {
+    width: 95%;
+    height: 70px;
+    background-color:black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    z-index: 999;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.logo 
+   {
+    padding: 20px;
+  }
+  .inputs
+    {
+        display: none;
+    }
+    .lables
+    {
+        display: none;
+    }
+.subnav 
+{
+    
+     display: flex; 
+    gap: 20px;
+    padding: 20px;
+    transition: all 1s;
+    
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+/* -------------------------------------home page----------------------------------------------------- */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid white; */
+    
+}
+.profile-card {
+    width: 90%;
+    min-height: 400px;
+    background-color:black;
+    display: flex;
+    gap: 20px;
+
+}
+.card-left {
+    width: 50%;
+    min-height: 400px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left-info {
+    width: 80%;
+    min-height: 350px;
+    background-color: black;
+    padding: 10px;
+    font-size: 20px;
+}
+.left-info h1,p {
+    margin-block: 10px;
+} 
+.left-info span {
+    color: rgb(5, 122, 168);
+    
+}
+.left-info button {
+    width: 200px;
+    height: 40px;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px rgb(13, 154, 209),0 0 60px rgb(13, 154, 209);
+    background-color: rgb(13, 154, 209);
+    margin-block: 20px;
+}
+.icon-left-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    margin-block:20px ;
+    margin-top: 20px;
+    transition: all 1s;
+}
+.icon-left-info i {
+    margin-top: 30px;
+}
+.icon-left-info i:hover {
+    transition: all 1s;
+    transform: scale(1.5,1.5);
+    color: rgb(13, 154, 209);
+    text-shadow: 0 0 30px rgb(13, 154, 209);
+}
+.card-right {
+    width: 50%;
+    min-height: 400px;
+    /* background-color:blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow: hidden;  
+}
+
+.image-bg {
+    width: 300px;
+    height: 300px;
+    scale: 0;
+    background-color: rgb(13, 154, 209);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgb(13, 154, 209), 0 0 40px rgb(13, 154, 209),0 0 60px rgb(13, 154, 209);
+    animation: slow linear forwards;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timeline: vewie();
+    animation-range: entry;
+    transition: all 1s;
+    position: relative;
+    
+}
+.image-bg img {
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+}
+@keyframes slow {
+    0% {
+        
+        opacity: -2;
+        scale: 0.5,0.5;
+    }
+    100% {
+        
+        opacity: 1;
+        scale: 1.1;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .overall {
+        width: 100%;
+        
+
+    }
+    .profile-card {
+        width: 100%;
+        flex-direction: column;
+
+    }
+    .card-left {
+        width: 100%;
+        padding-top:80px;
+
+    }
+    .left-info {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+       
+    }
+
+    .card-right {
+        width: 100%;
+    }
+    .icon-left-info {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    
+   
+    
+}
+/*---------------------------------------------- about --------------------------------------------------*/
+.about {
+    width: 100%;
+    min-height: 100vh;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* border: 2px solid white; */
+}
+.about-left {
+    width: 40%;
+    min-height: 400px;
+    background-color:black;
+   display: flex;
+   justify-content:center ;
+   align-items: center;
+}
+.image-border {
+    width: 350px;
+    min-height: 350px;
+    background-color:black;
+    border: 15px solid rgb(23, 145, 221);
+    box-shadow: 0 0 20px rgb(23, 145, 221),0 0 40px rgb(23, 145, 221),0 0 20px rgb(23, 145, 221) inset;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.image-border img {
+    width: 380px;
+    height: 380px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+
+    
+}
+.about-info {
+    width: 40%;
+    min-height: 400px;
+    background-color:black;
+    color: white;
+    font-size: 20px;
+    padding-top: 30px;
+}
+.about-info h3 {
+    margin-bottom: 50px;
+}
+.about-info span {
+    color: rgb(23, 145, 221);
+    text-shadow: 0 0 10px rgb(23, 145, 221);
+}
+.about-info button {
+    width: 200px;
+    height: 40px;
+    margin-top: 50px;
+    background-color: rgb(23, 145, 221);
+    border: none;
+    color: white;
+    box-shadow: 0 0 20px rgb(23, 145, 221), 0 0 40px rgb(23, 145, 221);
+}
+@media only screen and (min-width:300px) and (max-width:600px)  {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-left {
+        width: 100%;
+        padding: 30px;
+        order: 2;
+    }
+    .about-info {
+        width: 100%;
+        text-align: center;
+    }
+    .image-border img {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: -50px;
+        right: 50px;
+    
+        
+    }
+}
+/*------------------------------------ responsive-navbar------------------------------------- */
+input:checked~.subnav
+{
+    left: 0;
+}
+@media  only screen and (max-width:750px) 
+{
+    
+    .inputs
+    {
+        display: none;
+    }
+    .lables
+    {
+        display: block;
+    }
+   .subnav 
+   {
+    position: absolute;
+    left: 120%;
+    top: 73px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 50px;
+    min-height: 80vh;
+    background-color:black;
+   }
+    
+}
+/*--------------------------------------------------- education qualification -------------------------------*/
+.education {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid white; */
+    padding: 50px;
+}
+.education-qulification {
+    width: 95%;
+    min-height: 600px;
+    background-color: black;
+    display: flex;
+}
+.education-right {
+    width: 70%;
+    min-height: 600px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.education-right .right {
+    width: 70%;
+    box-shadow:0 0 10px rgb(23, 145, 221);
+    padding: 15px;
+    font-size: 15px;
+    color: white;
+    border-radius:20px ;
+    padding-left: 30px;
+    transition: all 1s;
+}
+.rightdes  {
+    width: 300px;
+    height: 350px;
+}
+.education-right .right:hover {
+    transform: scale(1.1,1.1) ;
+    
+}
+.education-right span {
+    color:  rgb(23, 145, 221);
+}
+
+.education-left {
+    width: 30%;
+    min-height: 600px;
+    background-color:black;
+    color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.education-left h1 {
+    margin-block: 20px;
+}
+.skills {
+    width: 100%;
+    height: 200PX;
+    /* background-color: azure; */
+    /* text-align: center; */
+}
+.skills img {
+    width: 50px;
+    height: 50px;
+}
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .education {
+        width: 100%;
+        flex-direction: column;
+        padding: 30px;
+    }
+.education-qulification {
+    flex-direction: column;
+    width: 100%;
+}
+    .education-right{
+        width: 100%;
+        
+    }
+    .right {
+        width: 100%;
+        padding: 0px;
+    }
+    .education-left {
+        width: 100%;
+        
+    }
+}
+/* --------------------------projects---------------------------------- */
+.projects {
+    width: 100%;
+    min-height: 100vh;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    /* border: 2px solid white;   */
+}
+.projects span {
+    color:  rgb(23, 145, 221);
+    text-shadow: 0 0 20px rgb(23, 145, 221);
+}
+.projects h1 {
+    margin: 15px;
+    
+}
+.acadamic-project {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+   
+}
+.project-card {
+    width: 25%;
+    height: 300px;
+    background-color:black;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    transition: transform 1s;
+    border: 5px solid black;
+    box-shadow: 0 0 10px white;
+    border-radius: 20px;
+    
+}
+.project-card img {
+    width: 100%;
+    height: 260px;
+    border-radius:20px ;
+}
+.project-card img:hover {
+    filter: brightness(40%);
+}
+.project-card:hover .project-content {
+    transform: translate(0);
+    top: 40px;
+    
+}
+.project-card:hover {
+    border: 5px solid rgb(23, 145, 221);
+    transform: scale(1.1,1.1);
+    box-shadow: 0 0 20px rgb(23, 145, 221),0 0 40px rgb(23, 145, 221);
+    border-radius: 20px;
+}
+.project-content {
+    width: 100%;
+    height: 300px;
+    /* background-color: cadetblue; */
+    position: absolute;
+   transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+    bottom: 0; 
+    background-image: linear-gradient( to top, transparent , rgb(23, 145, 221) 70%);
+    
+}
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .projects {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+       
+    }
+    .acadamic-project {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 50px;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .project-card {
+        width: 90%;
+       
+        
+    }
+}   
+/* ----------------------INDUVIDUAL PROJECTS--------------------                  */
+.invidual-project {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.pro-card-group {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+.pro-card {
+    width: 20%;
+    height: 350px;
+    background-color: black;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    transition: transform 1s;
+    border: 5px solid black;
+    box-shadow: 0 0 20px white;
+}
+.pro-card:hover .card-cantent {
+    transform: translate(0);
+    top: 40px;  
+}
+.pro-card:hover {
+    border: 5px solid rgb(23, 145, 221);
+    box-shadow: 0 0 20px rgb(23, 145, 221),0 0 40px rgb(23, 145, 221);
+    transform: scale(1.1,1.1);
+}
+.pro-card img {
+    width: 100%;
+    height: 310px;
+    border-radius:20px 20px 0 0;
+}
+.card-cantent {
+    width: 100%;
+    height: 300px;
+    /* background-color: darkgrey; */
+    position: absolute;
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
+    left: 0; 
+    background-image: linear-gradient( to top, transparent , rgb(23, 145, 221) 70%);
+    padding-top:10px ;
+}
+.text {
+    overflow: hidden;
+    border-right: 0.15em solid lightskyblue ;
+    white-space: nowrap;
+    animation: typing 3s  steps(50, end) infinite;
+}
+@keyframes typing {
+    0% {
+        width: 0;
+        
+    }
+    to {
+        width:100%;
+        
+    }
+}
+.project-revards {
+    width: 80%;
+    min-height: 150px;
+    /* background-color: chartreuse; */
+    margin-top: 40px;
+    padding: 20px;
+    border-radius:20px ;
+    box-shadow: 0 0 10px white;
+}
+.invidual-project span {
+    color: rgb(23, 145, 221);
+}
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .invidual-project {
+        width: 100%;
+        padding-top:30px ;
+        padding-bottom:30px ;
+    }
+    .pro-card-group {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .pro-card  {
+        width: 90%;
+    }
+    
+}
+/* ------------------------------contect us------------------------------------ */
+.contect-us {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.forms {
+    width: 80%;
+    min-height: 70vh;
+    background-color: black;
+    padding: 10px;
+}
+.f-l-name {
+    width: 100%;
+   min-height: 50px; 
+   display: flex;
+   justify-content: center;
+    align-items: center;
+   gap: 30px;
+   margin-top: 15px;
+}
+.f-l-name input {
+    width: 50%;
+    height: 45px;
+    padding: 10px;
+    outline: none;
+    
+}
+.m-email {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+.m-email input {
+    width: 50%;
+    height: 45px;
+    padding: 10px;
+    outline: none;
+}
+textarea {
+    width: 100%;
+    height: 300px;
+    resize: none;
+    margin-top: 15px;
+    padding: 10px;
+    outline: none;
+}
+.contect-us .forms button {
+    width: 200px;
+    height: 50px;
+    margin-top: 30px;
+    font-size: 20px;
+    border: none;
+}
+.contect-us .forms button:hover {
+    box-shadow: 0 0 20px rgb(23, 145, 221);
+    background-color: rgb(23, 145, 221);
+}
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .contect-us {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 50px;
+    }
+    .forms {
+        width: 100%;
+    }
+    .f-l-name {
+        width: 100%;
+        flex-direction: column;
+    }
+    .f-l-name input {
+        width: 100%;
+    }
+    .m-email {
+        width: 100%;
+        flex-direction: column;
+    }
+    .m-email input {
+        width: 100%;
+    }
+
+}
